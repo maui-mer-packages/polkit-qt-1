@@ -111,7 +111,7 @@ cd upstream
 %files
 %defattr(-,root,root,-)
 # >> files
-%doc AUTHORS COPYING README
+#%doc AUTHORS COPYING README
 %{_libdir}/libpolkit-qt-agent-1.so.1*
 %{_libdir}/libpolkit-qt-core-1.so.1*
 %{_libdir}/libpolkit-qt-gui-1.so.1*
