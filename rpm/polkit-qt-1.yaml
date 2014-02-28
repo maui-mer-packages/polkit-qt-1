@@ -1,6 +1,6 @@
 Name: polkit-qt-1
 Summary: Qt bindings for PolicyKit
-Version: 0.103.1.20130519.05b6ac7
+Version: 0.103.1.20140228.3a5f879
 Release: 1
 Group: System/Libraries
 License: GPLv2+
@@ -32,7 +32,7 @@ PkgConfigBR:
 
 PkgBR:
     - cmake
-    - kde-extra-cmake-modules
+    - extra-cmake-modules
 
 ConfigOptions:
     - -DCMAKE_INSTALL_PREFIX="%{_prefix}"
@@ -68,4 +68,3 @@ SubPackages:
           This package contains the development libraries and headers.
       Requires:
           - pkgconfig
-

@@ -1,7 +1,0 @@
-* Mon Feb 27 2012 Maurice de la Ferté <Maurice.Ferte@basyskom.com> - 1-0.103.0
-- Update version
-- This will fix upstream bug https://bugs.kde.org/show_bug.cgi?id=271934#c43
-
-* Fri Jul 22 2011 Maurice de la Ferté <Maurice.Ferte@basyskom.de> - 1-0.99.0
-- Overhaul spec and add yaml file
-- Initial changelog
