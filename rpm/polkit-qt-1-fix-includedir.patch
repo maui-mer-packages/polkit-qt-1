@@ -1,0 +1,14 @@
+diff -ru a/PolkitQt-1Config.cmake.in b/PolkitQt-1Config.cmake.in
+--- a/PolkitQt-1Config.cmake.in	2013-01-05 11:36:27.000000000 +1100
++++ b/PolkitQt-1Config.cmake.in	2013-01-22 13:22:27.031894671 +1100
+@@ -13,8 +13,8 @@
+    set(POLKITQT-1_INSTALL_DIR "@CMAKE_INSTALL_PREFIX@")
+ endif(NOT POLKITQT-1_INSTALL_DIR)
+ 
+-set(POLKITQT-1_INCLUDE_DIR              "${POLKITQT-1_INSTALL_DIR}/@INCLUDE_INSTALL_DIR@/polkit-qt-1")
+-set(POLKITQT-1_LIB_DIR                  "${POLKITQT-1_INSTALL_DIR}/@LIB_INSTALL_DIR@")
++set(POLKITQT-1_INCLUDE_DIR              "${POLKITQT-1_INSTALL_DIR}/include/polkit-qt-1")
++set(POLKITQT-1_LIB_DIR                  "${POLKITQT-1_INSTALL_DIR}/lib")
+ set(POLKITQT-1_POLICY_FILES_INSTALL_DIR "${POLKITQT-1_INSTALL_DIR}/share/polkit-1/actions")
+ 
+ # Compatibility

@@ -1,0 +1,71 @@
+Name: polkit-qt-1
+Summary: Qt bindings for PolicyKit
+Version: 0.103.1.20130519.05b6ac7
+Release: 1
+Group: System/Libraries
+License: GPLv2+
+URL: https://projects.kde.org/projects/kdesupport/%{name}
+Sources:
+    - "%{name}-%{version}.tar.bz2"
+Description: |
+    PolicyKit is an application-level toolkit for defining and handling the policy
+    that allows unprivileged processes to speak to privileged processes.
+    
+    It is a framework for centralizing the decision making process with respect to
+    granting access to privileged operations (like calling the HAL Mount() method)
+    for unprivileged (desktop) applications.
+    
+    libpolkit-qt-1 provides convenience classes and methods for Qt/KDE
+    applications that want to use PolicyKit.
+    
+    This package contains the files necessary for running applications that use
+    the libpolkit-qt-1 library.
+
+PkgConfigBR:
+    - Qt5Core
+    - Qt5Xml
+    - Qt5Gui
+    - Qt5DBus
+    - Qt5Widgets
+    - polkit-agent-1
+    - polkit-gobject-1
+
+PkgBR:
+    - cmake
+    - kde-extra-cmake-modules
+
+ConfigOptions:
+    - -DCMAKE_INSTALL_PREFIX="%{_prefix}"
+    - -DCMAKE_C_COMPILER:FILEPATH="cc"
+    - -DCMAKE_CXX_COMPILER:FILEPATH="g++"
+    - -DCMAKE_C_FLAGS="%{optflags} -fvisibility=hidden -fvisibility-inlines-hidden"
+    - -DCMAKE_CXX_FLAGS="%{optflags} -fvisibility=hidden -fvisibility-inlines-hidden"
+    - -DCMAKE_SKIP_RPATH=ON
+    - -DCMAKE_VERBOSE_MAKEFILE=ON
+    - -DCMAKE_SKIP_RPATH:BOOL=OFF
+    - -DCMAKE_USE_RELATIVE_PATHS=ON
+    - -DCMAKE_SHARED_LINKER_FLAGS="-Wl,--as-needed -Wl,--no-undefined"
+    - -DCMAKE_MODULE_LINKER_FLAGS="-Wl,--as-needed -Wl,--no-undefined"
+    - -DCMAKE_EXE_LINKER_FLAGS="-Wl,--as-needed -Wl,--no-undefined"
+
+Builder: cmake
+
+SubPackages:
+    - Name: devel
+      Summary: PolicyKit Qt development files
+      Group: Development/Libraries
+      Description: |
+          PolicyKit is an application-level toolkit for defining and handling the policy
+          that allows unprivileged processes to speak to privileged processes.
+          
+          It is a framework for centralizing the decision making process with respect to
+          granting access to privileged operations (like calling the HAL Mount() method)
+          for unprivileged (desktop) applications.
+          
+          libpolkit-qt-1 provides convenience classes and methods for Qt/KDE
+          applications that want to use PolicyKit-1.
+          
+          This package contains the development libraries and headers.
+      Requires:
+          - pkgconfig
+
