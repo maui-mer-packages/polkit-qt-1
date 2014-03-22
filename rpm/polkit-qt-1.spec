@@ -113,45 +113,45 @@ cd upstream
 %defattr(-,root,root,-)
 # >> files
 #%doc AUTHORS COPYING README
-%{_libdir}/libpolkit-qt-agent-1.so.1*
-%{_libdir}/libpolkit-qt-core-1.so.1*
-%{_libdir}/libpolkit-qt-gui-1.so.1*
+%{_libdir}/libpolkit-qt5-agent-1.so.1*
+%{_libdir}/libpolkit-qt5-core-1.so.1*
+%{_libdir}/libpolkit-qt5-gui-1.so.1*
 # << files
 
 %files devel
 %defattr(-,root,root,-)
 # >> files devel
-%{_includedir}/polkit-qt-1/PolkitQt1/ActionDescription
-%{_includedir}/polkit-qt-1/PolkitQt1/Agent/Listener
-%{_includedir}/polkit-qt-1/PolkitQt1/Agent/Session
-%{_includedir}/polkit-qt-1/PolkitQt1/Authority
-%{_includedir}/polkit-qt-1/PolkitQt1/Details
-%{_includedir}/polkit-qt-1/PolkitQt1/Gui/Action
-%{_includedir}/polkit-qt-1/PolkitQt1/Gui/ActionButton
-%{_includedir}/polkit-qt-1/PolkitQt1/Gui/ActionButtons
-%{_includedir}/polkit-qt-1/PolkitQt1/Identity
-%{_includedir}/polkit-qt-1/PolkitQt1/Subject
-%{_includedir}/polkit-qt-1/PolkitQt1/TemporaryAuthorization
-%{_includedir}/polkit-qt-1/polkitqt1-actiondescription.h
-%{_includedir}/polkit-qt-1/polkitqt1-agent-listener.h
-%{_includedir}/polkit-qt-1/polkitqt1-agent-session.h
-%{_includedir}/polkit-qt-1/polkitqt1-authority.h
-%{_includedir}/polkit-qt-1/polkitqt1-details.h
-%{_includedir}/polkit-qt-1/polkitqt1-export.h
-%{_includedir}/polkit-qt-1/polkitqt1-gui-action.h
-%{_includedir}/polkit-qt-1/polkitqt1-gui-actionbutton.h
-%{_includedir}/polkit-qt-1/polkitqt1-gui-actionbuttons.h
-%{_includedir}/polkit-qt-1/polkitqt1-identity.h
-%{_includedir}/polkit-qt-1/polkitqt1-subject.h
-%{_includedir}/polkit-qt-1/polkitqt1-temporaryauthorization.h
-%{_includedir}/polkit-qt-1/polkitqt1-version.h
-%{_libdir}/cmake/PolkitQt-1/PolkitQt-1Config.cmake
-%{_libdir}/cmake/PolkitQt-1/PolkitQt-1ConfigVersion.cmake
-%{_libdir}/libpolkit-qt-agent-1.so
-%{_libdir}/libpolkit-qt-core-1.so
-%{_libdir}/libpolkit-qt-gui-1.so
-%{_libdir}/pkgconfig/polkit-qt-1.pc
-%{_libdir}/pkgconfig/polkit-qt-agent-1.pc
-%{_libdir}/pkgconfig/polkit-qt-core-1.pc
-%{_libdir}/pkgconfig/polkit-qt-gui-1.pc
+%{_includedir}/polkit-qt5-1/PolkitQt1/ActionDescription
+%{_includedir}/polkit-qt5-1/PolkitQt1/Agent/Listener
+%{_includedir}/polkit-qt5-1/PolkitQt1/Agent/Session
+%{_includedir}/polkit-qt5-1/PolkitQt1/Authority
+%{_includedir}/polkit-qt5-1/PolkitQt1/Details
+%{_includedir}/polkit-qt5-1/PolkitQt1/Gui/Action
+%{_includedir}/polkit-qt5-1/PolkitQt1/Gui/ActionButton
+%{_includedir}/polkit-qt5-1/PolkitQt1/Gui/ActionButtons
+%{_includedir}/polkit-qt5-1/PolkitQt1/Identity
+%{_includedir}/polkit-qt5-1/PolkitQt1/Subject
+%{_includedir}/polkit-qt5-1/PolkitQt1/TemporaryAuthorization
+%{_includedir}/polkit-qt5-1/polkitqt1-actiondescription.h
+%{_includedir}/polkit-qt5-1/polkitqt1-agent-listener.h
+%{_includedir}/polkit-qt5-1/polkitqt1-agent-session.h
+%{_includedir}/polkit-qt5-1/polkitqt1-authority.h
+%{_includedir}/polkit-qt5-1/polkitqt1-details.h
+%{_includedir}/polkit-qt5-1/polkitqt1-export.h
+%{_includedir}/polkit-qt5-1/polkitqt1-gui-action.h
+%{_includedir}/polkit-qt5-1/polkitqt1-gui-actionbutton.h
+%{_includedir}/polkit-qt5-1/polkitqt1-gui-actionbuttons.h
+%{_includedir}/polkit-qt5-1/polkitqt1-identity.h
+%{_includedir}/polkit-qt5-1/polkitqt1-subject.h
+%{_includedir}/polkit-qt5-1/polkitqt1-temporaryauthorization.h
+%{_includedir}/polkit-qt5-1/polkitqt1-version.h
+%{_libdir}/cmake/PolkitQt5-1/PolkitQt5-1Config.cmake
+%{_libdir}/cmake/PolkitQt5-1/PolkitQt5-1ConfigVersion.cmake
+%{_libdir}/libpolkit-qt5-agent-1.so
+%{_libdir}/libpolkit-qt5-core-1.so
+%{_libdir}/libpolkit-qt5-gui-1.so
+%{_libdir}/pkgconfig/polkit-qt5-1.pc
+%{_libdir}/pkgconfig/polkit-qt5-agent-1.pc
+%{_libdir}/pkgconfig/polkit-qt5-core-1.pc
+%{_libdir}/pkgconfig/polkit-qt5-gui-1.pc
 # << files devel
