@@ -1,0 +1,29 @@
+From 196e7df31990efcb8935c2ad4f8c20d61ce0d0ad Mon Sep 17 00:00:00 2001
+From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+Date: Sun, 23 Mar 2014 15:27:34 +0000
+Subject: [PATCH] Fix include and libraries paths
+
+For some reason under Mer these are already resolved as absolute paths.
+---
+ PolkitQt-1Config.cmake.in | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/upstream/PolkitQt-1Config.cmake.in b/upstream/PolkitQt-1Config.cmake.in
+index dc86b3c..8b722a6 100644
+--- a/upstream/PolkitQt-1Config.cmake.in
++++ b/upstream/PolkitQt-1Config.cmake.in
+@@ -13,9 +13,9 @@ if(NOT POLKITQT-1_INSTALL_DIR)
+    set(POLKITQT-1_INSTALL_DIR "@CMAKE_INSTALL_PREFIX@")
+ endif(NOT POLKITQT-1_INSTALL_DIR)
+ 
+-set(POLKITQT-1_INCLUDE_DIR              "${POLKITQT-1_INSTALL_DIR}/@INCLUDE_INSTALL_DIR@/@POLKITQT-1_INCLUDE_PATH@")
++set(POLKITQT-1_INCLUDE_DIR              "@INCLUDE_INSTALL_DIR@/@POLKITQT-1_INCLUDE_PATH@")
+ set(POLKITQT-1_INCLUDE_DIRS             "${POLKITQT-1_INCLUDE_DIR}")
+-set(POLKITQT-1_LIB_DIR                  "${POLKITQT-1_INSTALL_DIR}/@LIB_INSTALL_DIR@")
++set(POLKITQT-1_LIB_DIR                  "@LIB_INSTALL_DIR@")
+ set(POLKITQT-1_POLICY_FILES_INSTALL_DIR "${POLKITQT-1_INSTALL_DIR}/share/polkit-1/actions")
+ 
+ # Compatibility
+-- 
+1.9.1
+

@@ -16,6 +16,7 @@ License:    GPLv2+
 URL:        https://projects.kde.org/projects/kdesupport/%{name}
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  polkit-qt5-1.yaml
+Patch0:     fix-cmake-paths.patch
 Requires(post): /sbin/ldconfig
 Requires(postun): /sbin/ldconfig
 BuildRequires:  pkgconfig(Qt5Core)
@@ -67,6 +68,8 @@ This package contains the development libraries and headers.
 %prep
 %setup -q -n %{name}-%{version}
 
+# fix-cmake-paths.patch
+%patch0 -p1
 # >> setup
 # << setup
 
