@@ -6,7 +6,8 @@ Group: System/Libraries
 License: GPLv2+
 URL: https://projects.kde.org/projects/kdesupport/%{name}
 Sources:
-    - "%{name}-%{version}.tar.bz2"
+    - "%{name}-%{version}.tar.xz"
+SetupOptions: -q -n %{name}-%{version}/upstream
 Description: |
     PolicyKit is an application-level toolkit for defining and handling the policy
     that allows unprivileged processes to speak to privileged processes.

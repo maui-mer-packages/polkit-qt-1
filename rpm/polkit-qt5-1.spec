@@ -14,7 +14,7 @@ Release:    1
 Group:      System/Libraries
 License:    GPLv2+
 URL:        https://projects.kde.org/projects/kdesupport/%{name}
-Source0:    %{name}-%{version}.tar.bz2
+Source0:    %{name}-%{version}.tar.xz
 Source100:  polkit-qt5-1.yaml
 Requires(post): /sbin/ldconfig
 Requires(postun): /sbin/ldconfig
@@ -64,14 +64,13 @@ This package contains the development libraries and headers.
 
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q -n %{name}-%{version}/upstream
 
 # >> setup
 # << setup
 
 %build
 # >> build pre
-cd upstream
 # << build pre
 
 %cmake .  \
@@ -85,7 +84,6 @@ make %{?_smp_mflags}
 %install
 rm -rf %{buildroot}
 # >> install pre
-cd upstream
 # << install pre
 %make_install
 
