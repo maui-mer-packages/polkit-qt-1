@@ -38,6 +38,12 @@ ConfigOptions:
 
 Builder: cmake
 
+Files:
+    - "%doc AUTHORS COPYING README"
+    - "%{_libdir}/libpolkit-qt5-agent-1.so.1*"
+    - "%{_libdir}/libpolkit-qt5-core-1.so.1*"
+    - "%{_libdir}/libpolkit-qt5-gui-1.so.1*"
+
 SubPackages:
     - Name: devel
       Summary: PolicyKit Qt development files
@@ -56,3 +62,13 @@ SubPackages:
           This package contains the development libraries and headers.
       Requires:
           - pkgconfig
+      Files:
+          - "%{_includedir}/polkit-qt5-1/*"
+          - "%{_libdir}/cmake/PolkitQt5-1/*"
+          - "%{_libdir}/libpolkit-qt5-agent-1.so"
+          - "%{_libdir}/libpolkit-qt5-core-1.so"
+          - "%{_libdir}/libpolkit-qt5-gui-1.so"
+          - "%{_libdir}/pkgconfig/polkit-qt5-1.pc"
+          - "%{_libdir}/pkgconfig/polkit-qt5-agent-1.pc"
+          - "%{_libdir}/pkgconfig/polkit-qt5-core-1.pc"
+          - "%{_libdir}/pkgconfig/polkit-qt5-gui-1.pc"
