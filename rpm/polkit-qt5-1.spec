@@ -9,7 +9,7 @@ Name:       polkit-qt5-1
 # << macros
 
 Summary:    Qt bindings for PolicyKit
-Version:    0.103.1.20140228.3a5f879
+Version:    0.103.1
 Release:    1
 Group:      System/Libraries
 License:    GPLv2+
@@ -26,7 +26,6 @@ BuildRequires:  pkgconfig(Qt5Widgets)
 BuildRequires:  pkgconfig(polkit-agent-1)
 BuildRequires:  pkgconfig(polkit-gobject-1)
 BuildRequires:  cmake
-BuildRequires:  extra-cmake-modules
 BuildRequires:  cmake
 
 %description
@@ -76,18 +75,6 @@ cd upstream
 # << build pre
 
 %cmake .  \
-    -DCMAKE_INSTALL_PREFIX="%{_prefix}" \
-    -DCMAKE_C_COMPILER:FILEPATH="cc" \
-    -DCMAKE_CXX_COMPILER:FILEPATH="g++" \
-    -DCMAKE_C_FLAGS="%{optflags} -fvisibility=hidden -fvisibility-inlines-hidden" \
-    -DCMAKE_CXX_FLAGS="%{optflags} -fvisibility=hidden -fvisibility-inlines-hidden" \
-    -DCMAKE_SKIP_RPATH=ON \
-    -DCMAKE_VERBOSE_MAKEFILE=ON \
-    -DCMAKE_SKIP_RPATH:BOOL=OFF \
-    -DCMAKE_USE_RELATIVE_PATHS=ON \
-    -DCMAKE_SHARED_LINKER_FLAGS="-Wl,--as-needed -Wl,--no-undefined" \
-    -DCMAKE_MODULE_LINKER_FLAGS="-Wl,--as-needed -Wl,--no-undefined" \
-    -DCMAKE_EXE_LINKER_FLAGS="-Wl,--as-needed -Wl,--no-undefined" \
     -DUSE_QT5:bool=ON
 
 make %{?_smp_mflags}
