@@ -9,7 +9,7 @@ Name:       polkit-qt5-1
 # << macros
 
 Summary:    Qt bindings for PolicyKit
-Version:    0.103.1
+Version:    0.112.0
 Release:    1
 Group:      System/Libraries
 License:    GPLv2+
